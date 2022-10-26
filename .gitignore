@@ -1,0 +1,4 @@
+.vscode
+__pycache__
+export_videos/*
+redvid_temp/*
