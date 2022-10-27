@@ -1,13 +1,17 @@
 from redvid import Downloader
+from cprint import *
 
-def redditDownload(link: str):
+def redditDownload(videoLink: str):
     reddit = Downloader()
     reddit.min = True
-    reddit.url = f'https://www.reddit.com/{link}'
+    reddit.url = f'https://www.reddit.com/{videoLink}'
     try:
+        cprint.info('Downloading...')
+        reddit.path = './export_videos'
         reddit.download()
     except:
         pass
+    cprint.ok('Download Completed..!')
 
 if __name__ == "__main__" :
-    redditDownload('r/funnyvideos/comments/ydrc4r/where_are_you_from/')
+    redditDownload('r/Unexpected/comments/yecitb/happy_birthday/')
