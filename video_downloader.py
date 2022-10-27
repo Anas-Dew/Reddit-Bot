@@ -2,9 +2,12 @@ from redvid import Downloader
 
 def redditDownload(link: str):
     reddit = Downloader()
-    reddit.max = True
+    reddit.min = True
     reddit.url = f'https://www.reddit.com/{link}'
-    reddit.download()
+    try:
+        reddit.download()
+    except:
+        pass
 
 if __name__ == "__main__" :
-    redditDownload('r/LeakedReality/comments/v88hxm/we_still_need_funny_videos_too_right/')
+    redditDownload('r/funnyvideos/comments/ydrc4r/where_are_you_from/')

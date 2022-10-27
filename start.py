@@ -4,9 +4,9 @@ from video_combiner import mergeAudioAndVideo
 import os
 
 if __name__ == "__main__" :
-    # links = linksOfTopVideos('funny videos')
-    # for i in links:
-    #     redditDownload(i)
+    links = linksOfTopVideos('funnyvideos')
+    for i in links:
+        redditDownload(i)
     
     raw_video_folders = [x[0] for x in os.walk('./redvid_temp/')]
 
