@@ -4,6 +4,7 @@ from cprint import *
 def redditDownload(videoLink: str):
     reddit = Downloader()
     reddit.min = True
+    # reddit.max = True
     reddit.url = f'https://www.reddit.com/{videoLink}'
     try:
         cprint.info('Downloading...')
